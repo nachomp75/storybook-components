@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './mylabel.css';
 
 interface MyLabelProps {
@@ -25,6 +27,11 @@ interface MyLabelProps {
    * The color of the font
    */
   fontColor?: string;
+
+  /**
+   * The color of the label background
+   */
+  backgroundColor?: string;
 }
 
 export const MyLabel = ({
@@ -33,11 +40,12 @@ export const MyLabel = ({
   allCaps = false,
   color = 'primary',
   fontColor,
+  backgroundColor = 'transparent',
 }: MyLabelProps) => {
   return (
     <span
       className={`label ${size} text-${color}`}
-      style={{ color: fontColor }}
+      style={{ color: fontColor, backgroundColor }}
     >{`${allCaps ? label.toUpperCase() : label}`}</span>
   );
 };
