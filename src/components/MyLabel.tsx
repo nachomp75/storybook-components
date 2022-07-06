@@ -2,7 +2,7 @@ import React from 'react';
 
 import './mylabel.css';
 
-interface MyLabelProps {
+export interface MyLabelProps {
   /**
    * The text to display
    */
