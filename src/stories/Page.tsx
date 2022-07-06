@@ -90,3 +90,5 @@ export const Page: React.VFC = () => {
     </article>
   );
 };
+
+export default Page;
